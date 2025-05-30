@@ -20,7 +20,7 @@ function category_tree_posts_shortcode() {
     foreach ($categories as $category) {
         $query = new WP_Query([
             'cat' => $category->term_id,
-            'posts_per_page' => 5,
+            'posts_per_page' => -1,
         ]);
 
         if ($query->have_posts()) {
